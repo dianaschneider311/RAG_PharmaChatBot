@@ -221,7 +221,7 @@ The filtered vector search happens in `src/retrieval/retriever.py`:
 
 3) **Vector search**
    - The query is embedded using the same embedding model used for ingestion.
-   - Qdrant returns topâ€‘K points by similarity **after** applying the filters serverâ€‘side.
+   - Qdrant returns top-K points by similarity **after** applying the filters server-side.
    - This is implemented via `search()` or `query_points()` depending on the client version.
 
 4) **DB enrichment**
@@ -366,17 +366,17 @@ Retrieval stack:
 Ingestion utilities:
 - RSS: `feedparser`, `httpx`, `trafilatura`
 - PDFs: `pypdf`, `langchain-text-splitters` (RecursiveCharacterTextSplitter)
-## Optional Reâ€‘Ranker (Implementation Details)
+## Optional Re-Ranker (Implementation Details)
 
-The optional reâ€‘ranker is in `src/retrieval/rag.py`:
+The optional re-ranker is in `src/retrieval/rag.py`:
 
 1) **Candidate pool**
    - A larger pool is retrieved from Qdrant (`limit * rerank_pool_multiplier`).
 
-2) **Reasonâ€‘focused scoring**
+2) **Reason-focused scoring**
    - Reranking uses `suggestion_reason_clean` when available.
    - It computes semantic similarity between the query and `suggestion_reason_clean`.
-   - It also computes lexical overlap and phraseâ€‘anchor bonuses to favor distinctive matches.
+   - It also computes lexical overlap and phrase-anchor bonuses to favor distinctive matches.
 
 3) **Final ordering**
    - Results are sorted by the hybrid rerank score.
