@@ -80,7 +80,7 @@ RAG_PharmaChatBot/
 |   `-- api/
 |       `-- main.py            # FastAPI Q&A endpoints
 |-- data/input/
-|   `-- Genentech_langchain_chatbot_input_v7_updated.csv
+|   `-- REP_HCP_interaction_suggestions.csv
 |-- scripts/
 |   |-- run_ingest_csv.ps1     # (planned) PowerShell ingestion wrapper
 |   |-- run_rss_pipeline.ps1   # RSS fetch + insert + embed
