@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/
+
+# Pytest
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# Env files
+.env
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# Images
+image.png
+image-1.png
+
+# Notebooks (root)
+Untitled.ipynb
+test_connections.ipynb
